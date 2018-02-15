@@ -13,3 +13,5 @@ If you have don't need notice some software's version, add it in **EXCLUDE_SOFTW
 用於檢查透過 **brew-cask** 所安裝的軟體，並在版本更新時予以提示。
 
 若有任何不需列入版本更新通知的軟體，請將其加入 **EXCLUDE_SOFTWARE** 變數內。
+
+![Screenshot](https://raw.githubusercontent.com/AdaHsu/mactools/master/screenshot/check_cask.png)
