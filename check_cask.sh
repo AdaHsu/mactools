@@ -16,6 +16,9 @@
 # softwares without checking it's version.
 EXCLUDE_SOFTWARE="filezilla firefox google-chrome intellij-idea istat-menus iterm2 sourcetree visual-studio-code "
 
+COLOR_RESET='\033[0m'
+COLOR_HIGHLIGHT='\033[1;37m'
+
 # check shell, only zsh and bash
 SH=$(ps -o comm= -p $$)
 
@@ -43,7 +46,7 @@ do
     then
         if [ "${CURRENT_VERSION}" != "${INSTALLED_VERSION}" ]
         then
-            echo -n ": ${INSTALLED_VERSION} installed, but new update ${CURRENT_VERSION} exists."
+            echo -n ": ${INSTALLED_VERSION} installed, but new update ${COLOR_HIGHLIGHT}${CURRENT_VERSION}${COLOR_RESET} exists."
         fi    
     fi
     echo
