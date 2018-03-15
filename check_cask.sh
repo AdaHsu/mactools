@@ -14,7 +14,7 @@
 #######################################################
 
 # softwares without checking it's version.
-EXCLUDE_SOFTWARE="filezilla firefox google-chrome intellij-idea istat-menus iterm2 sourcetree visual-studio-code "
+EXCLUDE_SOFTWARE="firefox google-chrome intellij-idea istat-menus iterm2 sourcetree visual-studio-code "
 
 COLOR_RESET='\033[0m'
 COLOR_HIGHLIGHT='\033[1;37m'
