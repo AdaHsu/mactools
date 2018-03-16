@@ -46,7 +46,7 @@ do
     then
         if [ "${CURRENT_VERSION}" != "${INSTALLED_VERSION}" ]
         then
-            echo -n ": ${INSTALLED_VERSION} installed, but new update ${COLOR_HIGHLIGHT}${CURRENT_VERSION}${COLOR_RESET} exists."
+            echo -e -n ": ${INSTALLED_VERSION} installed, but new update ${COLOR_HIGHLIGHT}${CURRENT_VERSION}${COLOR_RESET} exists."
         fi    
     fi
     echo
