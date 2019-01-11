@@ -6,7 +6,7 @@ Some utilities for me to administrate my macOS.
 
 ## check_cask.sh
 
-Check what I had installed version via **brew-cask** and notice you when new version comming.
+Check what I had installed version via **brew-cask** and noticed when new version comming.
 
 If you have don't need notice some software's version, add it in **EXCLUDE_SOFTWARE** variable.
 
