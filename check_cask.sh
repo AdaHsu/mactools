@@ -14,7 +14,7 @@
 #######################################################
 
 # softwares without checking it's version.
-EXCLUDE_SOFTWARE="firefox google-chrome istat-menus iterm2 sourcetree visual-studio-code telegram gitkraken adguard iina"
+EXCLUDE_SOFTWARE="firefox google-chrome istat-menus iterm2 sourcetree visual-studio-code telegram gitkraken adguard iina araxis-merge"
 
 COLOR_RESET='\033[0m'
 COLOR_HIGHLIGHT='\033[1;37m'
