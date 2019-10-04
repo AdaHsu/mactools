@@ -47,7 +47,7 @@ SSID=$(/System/Library/PrivateFrameworks/Apple80211.framework/Versions/Current/R
 
 if [ "${SSID}" = "NEXUS_6P" ]
 then
-    SHOW_MOD="OUTDOOR"
+    SHOW_MOD="外出"
     outdoor
 else
     SHOW_MOD="自動"
