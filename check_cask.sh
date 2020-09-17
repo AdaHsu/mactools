@@ -5,16 +5,16 @@
 # check_cask.sh Check software installed via brew-cask.
 # Copyright (C) 2018 Ada Hsu, Taiwan.
 #
-#  This file is free software: you may copy, redistribute and/or modify it   
+#  This file is free software: you may copy, redistribute and/or modify it
 #  under the terms of the Apache License, Version 2.0.
-#  You may obtain a copy of the License at  
+#  You may obtain a copy of the License at
 #
-#  https://www.apache.org/licenses/LICENSE-2.0  
+#  https://www.apache.org/licenses/LICENSE-2.0
 #
 #######################################################
 
 # softwares without checking it's version.
-EXCLUDE_SOFTWARE="firefox google-chrome istat-menus iterm2 sourcetree visual-studio-code telegram gitkraken adguard iina araxis-merge"
+EXCLUDE_SOFTWARE="firefox google-chrome istat-menus iterm2 sourcetree visual-studio-code telegram gitkraken adguard iina araxis-merge microsoft-edge azure-data-studio "
 
 COLOR_RESET='\033[0m'
 COLOR_HIGHLIGHT='\033[1;37m'
@@ -33,7 +33,7 @@ fi
 
 IFS='
 '
-for SOFTWARE in $(brew cask list)
+for SOFTWARE in $(brew list --cask)
 do
     BOTTLE=$(brew cask info ${SOFTWARE} | grep -A 1 '==> Name' | tail -n 1)
     VERSION_INFO=($(brew cask info ${SOFTWARE} | sed -n -e 1p -e 3p))
@@ -47,7 +47,7 @@ do
         if [ "${CURRENT_VERSION}" != "${INSTALLED_VERSION}" ]
         then
             echo -e -n ": ${INSTALLED_VERSION} installed, but new update ${COLOR_HIGHLIGHT}${CURRENT_VERSION}${COLOR_RESET} exists."
-        fi    
+        fi
     fi
     echo
 done
