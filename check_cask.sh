@@ -14,7 +14,7 @@
 #######################################################
 
 # softwares without checking it's version.
-EXCLUDE_SOFTWARE="firefox google-chrome istat-menus iterm2 sourcetree visual-studio-code telegram gitkraken adguard iina araxis-merge microsoft-edge azure-data-studio "
+EXCLUDE_SOFTWARE="firefox istat-menus iterm2 sourcetree visual-studio-code telegram gitkraken adguard iina araxis-merge microsoft-edge azure-data-studio bettertouchtool "
 
 COLOR_RESET='\033[0m'
 COLOR_HIGHLIGHT='\033[1;37m'
@@ -35,8 +35,8 @@ IFS='
 '
 for SOFTWARE in $(brew list --cask)
 do
-    BOTTLE=$(brew cask info ${SOFTWARE} | grep -A 1 '==> Name' | tail -n 1)
-    VERSION_INFO=($(brew cask info ${SOFTWARE} | sed -n -e 1p -e 3p))
+    BOTTLE=$(brew info --cask ${SOFTWARE} | grep -A 1 '==> Name' | tail -n 1)
+    VERSION_INFO=($(brew info --cask ${SOFTWARE} | sed -n -e 1p -e 3p))
     CURRENT_VERSION=$(echo ${VERSION_INFO[${OFFSET0}]} | cut -d\  -f 2)
     INSTALLED_VERSION=$(echo ${VERSION_INFO[${OFFSET1}]} | cut -d\  -f 1 | awk -F/ '{ print $NF }')
     NAME=$(echo ${VERSION_INFO[${OFFSET0}]} | cut -d: -f 1)
